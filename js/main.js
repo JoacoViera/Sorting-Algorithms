@@ -79,12 +79,12 @@ const pivot = ( left,  right, list) => {
 
 
 const bubbleSort = (list) => {
-    //Get the list length
     let timeStart = Date.now();
     let n = list.length;
     if(list !== null && n>1){
         for (let i = 0; i < n; i++) {
-            for (let j = 0; j < n; j++){
+            for (let j = 0; j+1< n; j++){
+                console.log(list);
                 if (list[j] > list[j + 1]){
                     swap(list,j,j+1);
                 }
@@ -133,7 +133,7 @@ const selectionSort = (list) => {
 }
 
 
-const randomNumbers = randomArrayNonRepetitive(100,10000);
+const randomNumbers = randomArrayNonRepetitive(10,10000);
 //Para clonar un array
 const insertion = randomNumbers.slice(0);
 const selection = randomNumbers.slice(0);
